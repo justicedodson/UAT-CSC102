@@ -1,0 +1,45 @@
+<!-- Created by Your Name, Date: 05/18/2025 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Odo's Honest Dice Game</title>
+    <!-- Link to external CSS or JS files -->
+    <script src="code.js" defer></script>
+</head>
+<body>
+    <nav>
+          <h2>
+          <a href="index.html">Home</a>
+          <br>
+          <a href="Boards.html">Boards</a>
+          <br>
+          <a href="game.html">Game</a>
+          </h2>
+         </nav>
+
+<!-- Page Header -->
+<h1>Welcome Odo's Honest Dice Game!</h1>
+<p>Try your luck! Just don't cheat...</p>
+
+<!-- Form to trigger the game -->
+<form onsubmit="playDiceGame(); return false;">
+    <!-- Submit button to start the game -->
+    <input type="submit" value="Roll the Dice">
+</form>
+
+<!-- Display the result -->
+<div id="gameResult"></div>
+
+<!-- Example of parameterized function -->
+<form onsubmit="displayUserMessage(document.getElementById('playerName').value); return false;">
+    <label for="playerName">What's your name, Humie?:</label>
+    <input type="text" id="playerName" name="playerName">
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Display the personalized message -->
+<div id="userMessage"></div>
+
+</body>
+</html>
