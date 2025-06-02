@@ -1,0 +1,140 @@
+    <!--Justice Dodson-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret Message Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f8ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Raleway', sans-serif;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #warning {
+      color: red;
+      margin-top: 10px;
+    }
+
+    #secretMessage {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+
+    img {
+      margin-top: 20px;
+      max-width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Discover Your Secret Message!</h1>
+  <div class="container">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" placeholder="Enter your first name">
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" placeholder="Enter your last name">
+
+    <label for="zipCode">ZIP Code:</label>
+    <input type="text" id="zipCode" placeholder="Enter your ZIP code">
+
+    <button id="revealButton">Reveal Secret</button>
+
+    <div id="warning"></div>
+
+    <div id="secretMessage" style="display:none;">
+      🎉 Congratulations! Here is your secret message: <br>
+      <em>"CODING IS HARD!"</em>
+    </div>
+  </div>
+
+  <img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png" alt="Secret icon">
+
+  
+  <script>
+    // Wait until the document is fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      // Reference to the reveal button
+      var revealButton = document.getElementById("revealButton");
+
+      // When the button is clicked
+      revealButton.addEventListener("click", function() {
+        // Get input values
+        var firstName = document.getElementById("firstName").value.trim();
+        var lastName = document.getElementById("lastName").value.trim();
+        var zipCode = document.getElementById("zipCode").value.trim();
+
+        // Combine names
+        var fullName = firstName + " " + lastName;
+
+        // Reference to warning and secret message areas
+        var warningDiv = document.getElementById("warning");
+        var secretMessageDiv = document.getElementById("secretMessage");
+
+        // Clear previous messages
+        warningDiv.textContent = "";
+        secretMessageDiv.style.display = "none";
+
+        // Check name length
+        if (fullName.length > 20) {
+          warningDiv.textContent = "Your full name must be 20 characters or fewer!";
+          return;
+        }
+
+        // Check zip code validity
+        var zipCodePattern = /^\d{5}$/;
+        if (!zipCodePattern.test(zipCode)) {
+          warningDiv.textContent = "Please enter a valid 5-digit ZIP code.";
+          return;
+        }
+
+        // Show the secret message
+        secretMessageDiv.style.display = "block";
+      });
+    });
+  </script>
+</body>
+</html>
