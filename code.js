@@ -26,7 +26,7 @@ function playDiceGame() {
         // If sum equals 7 or 11, player loses
         resultHTML += '<h3>CRAPS - You lose! Better luck next time, Humie..</h3>';
     } else if (die1 === die2 && die1 % 2 === 0) {
-        // If both dice are equal AND the number is even
+        // If both dice are equal AND the number is even (Logic Error area)(In the original code, winning condition is when both dice are equal and both are even, modified code is when both dice are equal and the sum is even)
         resultHTML += '<h3>You won!</h3>';
     } else {
         // All other results are a push
@@ -63,4 +63,6 @@ function displayUserMessage(playerName) {
     
     // Clear the input box
     document.getElementById('playerName').value = '';
+   
+
 }

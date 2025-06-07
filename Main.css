@@ -1,37 +1,37 @@
-/* 
-declaration block:
-
-selector{
-    property: value;
-    property2: value;
+/* Make the background soft and styled */
+body {
+  background-color: #2804a8;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
 }
- */
 
- body{
-    background-color: blue;
-    color: whitesmoke;
+/* Style the buttons */
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
- }
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
 
- nav{
-    height: 600px;
-    width: 200px;
-    float: left;
-    padding: 5px;
-    line-height: 30px
- }
+/* Image spacing */
+#memeImage {
+  margin-top: 20px;
+}
 
- footer{
-    text-align: center;
-    margin-right: 200px;
-
- }
- #memeImage{
-    marging-right: 200px
-    width: 400px
- }
-
- h1{
-    text-align: center;
-    
- }
+/* Message area */
+#messageArea {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}

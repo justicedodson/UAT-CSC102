@@ -1,44 +1,52 @@
 <!-- Justice Dodson 5/15/2025 -->
-<!-- DOCTYPE HTML -->
- <!DOCTYPE html>
- <!-- the html tag goes next -->
-  <html>
-    <!-- the head section has info for the browser and search engine -->
-     <head>
-        <title>CSC102 Home Page</title>
-        <!-- add a link to our css file -->
-         <link rel="stylesheet" href="Main.css">
-     </head>
+<!DOCTYPE html>
+<html lang="en">
+  <!-- The head section includes metadata and links -->
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSC102 Home Page</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="Main.css" />
+  </head>
 
-     <!-- the body section holds the text and images we want to show to the user -->
-      <body>
-        <h1>Welcome to my CSC102 Home Page</h1>
-        <!-- create a nav section to hold the menu  -->
-         <nav>
-          <h2>
-          <a href="index.html">Home</a>
-          <br>
-          <a href="boards.html">Boards</a>
-          <br>
-          <a href="game.html">Game</a>
-          </h2>
-         </nav>
-      </header>
+  <body>
+    <!-- Page header -->
+    <h1>Welcome to my CSC102 Home Page</h1>
 
+    <!-- Navigation links -->
+    <nav>
+      <h2>
+        <a href="index.html">Home</a><br />
+        <a href="boards.html">Boards</a><br />
+        <a href="game.html">Game</a>
+      </h2>
+    </nav>
 
-        <!-- p is paragraph tag; has spacing around it by default -->
+    <!-- Buttons for Start and Stop -->
+    <div>
+      <!-- Button to start moving image -->
+      <button id="startBtn" onclick="startMovement()">Start</button>
+      <!-- Button to stop image movement -->
+      <button id="stopBtn" onclick="stopMovement()" disabled>Stop</button>
+    </div>
 
-        <p>
-            <!--  img is the image tag -->
-            <img id="memeImage" src="meme.jpeg">
-        </p>
-        <footer>
-          Justice Dodson<br>
-          University of Advancing Technology<br>
-          2625 W Baseline Rd<br>
-          Tempe, AZ 85283<br>
+    <!-- Image that moves -->
+    <p>
+      <img id="memeImage" src="meme.jpeg" alt="Funny Meme" width="200" />
+    </p>
 
-        </footer>
-      </body>
-  </html>
-  
+    <!-- Area to display messages using innerHTML -->
+    <p id="messageArea"></p>
+
+    <!-- Footer with contact info -->
+    <footer>
+      Justice Dodson<br />
+      University of Advancing Technology<br />
+      2625 W Baseline Rd<br />
+      Tempe, AZ 85283<br />
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="main.js"></script>
+  </body>
+</html>
