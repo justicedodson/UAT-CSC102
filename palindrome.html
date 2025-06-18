@@ -1,0 +1,47 @@
+<!-- Justice Dodson 6/18/2025 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Palindrome Checker</title>
+    <!-- Link to the shared stylesheet -->
+    <link rel="stylesheet" href="Main.css" />
+  </head>
+
+  <body>
+    <!-- Page heading -->
+    <h1>Palindrome Checker</h1>
+
+    <!-- Navigation bar -->
+    <nav>
+      <h2>
+        <a href="index.html">Home</a><br />
+        <a href="boards.html">Boards</a><br />
+        <a href="game.html">Game</a><br />
+        <a href="palindrome.html">Palindrome Checker</a>
+      </h2>
+    </nav>
+
+    <!-- Palindrome input section -->
+    <section>
+      <h2>Check if your word or phrase is a Palindrome</h2>
+
+      <!-- Form for user input -->
+      <form id="palindromeForm" onsubmit="return checkPalindrome()">
+        <input
+          type="text"
+          id="palindromeInput"
+          name="palindromeInput"
+          required
+          placeholder="Enter a word or phrase"
+        />
+        <input type="submit" value="Check" />
+      </form>
+
+      <!-- Display area for result -->
+      <p id="palindromeResult"></p>
+    </section>
+    <!-- Link to external JavaScript -->
+    <script src="palindrome.js"></script>
+  </body>
+</html>
