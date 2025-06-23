@@ -63,6 +63,5 @@ function displayUserMessage(playerName) {
     
     // Clear the input box
     document.getElementById('playerName').value = '';
-   
-
+    
 }

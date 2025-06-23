@@ -32,7 +32,16 @@
 
         <p>
             <!--  img is the image tag -->
-            <img id="memeImage" src="meme.jpeg">
+             <!-- Meme Fortune Teller UI -->
+              <img id="memeImage" src="meme.jpeg" />
+            <!-- Where fortune result will be displayed -->
+             <p id="fortuneResult">Click the meme to get your fortune!</p>
+          <!-- External JS file -->
+           <script src="fortune.js"></script>
+
+        
+           
+
         </p>
         <footer>
           Justice Dodson<br>
@@ -41,36 +50,9 @@
           Tempe, AZ 85283<br>
 
         </footer>
-        <!-- Background music -->
-<audio id="backgroundMusic" src="us-lab-background.mp3" preload="auto" loop></audio>
+        
+        <!-- Meme Fortune Teller UI -->
 
-<!-- Mute/Unmute Button -->
-<button onclick="toggleMusic()" id="musicButton">🔊 Mute Music</button>
-
-<script>
-  // Play background music after slight delay (may require interaction)
-  let bgMusic = document.getElementById("backgroundMusic");
-  let musicButton = document.getElementById("musicButton");
-
-  // Try to autoplay when page loads (some browsers may block it)
-  window.onload = function () {
-    bgMusic.volume = 0.5; // Optional: lower volume
-    bgMusic.play().catch(() => {
-      musicButton.innerText = "▶️ Play Music";
-    });
-  };
-
-  // Toggle mute/unmute
-  function toggleMusic() {
-    if (bgMusic.paused) {
-      bgMusic.play();
-      musicButton.innerText = "🔊 Mute Music";
-    } else {
-      bgMusic.pause();
-      musicButton.innerText = "▶️ Play Music";
-    }
-  }
-</script>
 
       </body>
   </html>
