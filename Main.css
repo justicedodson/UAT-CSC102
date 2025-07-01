@@ -104,3 +104,46 @@ footer {
   font-size: 14px;
   color: #333;
 }
+/* ========== Welcome Page Styles ========== */
+
+.welcome-body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.welcome-container {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-title {
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.enter-button {
+  display: inline-block;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #006699;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.enter-button:hover {
+  background-color: #0099cc;
+  transform: scale(1.05);
+}
+
